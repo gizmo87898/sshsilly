@@ -1,7 +1,7 @@
 sudo apt update
 sudo apt install openssh-server -y
 sudo ufw allow ssh
-sudo echo "GatewayPorts yes" >> /etc/ssh/sshd_config
+echo "GatewayPorts yes" | sudo tee -a /etc/ssh/sshd_config
 systemctl reload ssh.service
 
 ssh -R 22:127.0.0.1:2222 gizmo@75.138.184.49
